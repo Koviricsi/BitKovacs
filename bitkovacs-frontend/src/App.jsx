@@ -1,5 +1,11 @@
+import Test from "./pages/test.jsx";
+
 function App() {
-  return <></>;
+  return(
+    <>
+      <Test/>
+    </>
+  );
 }
 
 export default App;
