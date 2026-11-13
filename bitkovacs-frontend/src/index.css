@@ -1,3 +1,15 @@
+/*https://colorhunt.co/palette/0107360d1c4222396ffcf1d0*/
+
+:root{
+  --dark-blue: #010736;
+  --grey-blue: #0D1C42;
+  --light-blue: #22396F;
+  --cream: #FCF1D0;
+
+  --white: #e8e8e8;
+  --black: #111111;
+}
+
 *,
 *::before,
 *::after {
