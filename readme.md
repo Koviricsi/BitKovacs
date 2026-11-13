@@ -24,17 +24,13 @@ A **BitKovács** a csapatunk év végi technikumi szakmai vizsgaremeke.
 > [!WARNING]
 > **Fejlesztés alatt (Work in Progress):** A projekt jelenleg aktív fejlesztés alatt áll. A funkciók, a felület és a dokumentáció folyamatosan bővülnek a vizsgaidőszakig.
 
-*(Ide írhattok majd egy rövid, 2-3 mondatos összefoglalót arról, hogy pontosan mit csinál a szoftver, milyen problémát old meg, és kiknek szól.)*
-
 ---
 
 ## 🛠️ Használt technológiák
 
-*(Itt tüntethetitek fel a projektben használt főbb eszközöket, keretrendszereket – az alábbiak csak példák, írjátok át a sajátjaitokra:)*
-
 * **Frontend:** HTML5, CSS3, JavaScript / React
-* **Backend:** Node.js / PHP / C#
-* **Adatbázis:** MySQL / PostgreSQL
+* **Backend:** Node.js / C#
+* **Adatbázis:** MySQL
 * **Verziókezelés:** Git & GitHub
 
 ---
@@ -45,9 +41,9 @@ A projektet készíti és fejleszti:
 
 | Név | Szerepkör | Elérhetőség |
 | :--- | :--- | :--- |
-| **Kövi Richárd** | *Fejlesztő* | [GitHub Profil](#) |
-| **Bazsó Patrik** | *Fejlesztő* | [GitHub Profil](#) |
-| **Horváth Kevin** | *Fejlesztő* | [GitHub Profil](#) |
+| **Kövi Richárd** | *Fejlesztő* | [GitHub Profil](https://github.com/Koviricsi) |
+| **Bazsó Patrik** | *Fejlesztő* | [GitHub Profil](https://github.com/Bl4ver) |
+| **Horváth Kevin** | *Fejlesztő* | [GitHub Profil](https://github.com/HKevin0121) |
 
 ---
 
