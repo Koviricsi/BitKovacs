@@ -1,10 +1,21 @@
 /*https://colorhunt.co/palette/0107360d1c4222396ffcf1d0*/
+/*https://colorhunt.co/palette/0915401b2cc17692ffabd2fa*/
 
-:root{
+/*:root{
   --dark-blue: #010736;
   --grey-blue: #0D1C42;
   --light-blue: #22396F;
   --cream: #FCF1D0;
+
+  --white: #e8e8e8;
+  --black: #111111;
+}*/
+
+:root{
+  --dark-blue: #091540;
+  --blue: #1B2CC1;
+  --light-blue: #7692FF;
+  --baby-blue: #ABD2FA;
 
   --white: #e8e8e8;
   --black: #111111;
@@ -21,7 +32,11 @@
 body {
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.5;
-  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+#root{
+  min-height: 100dvh;
 }
 
 img,

@@ -1,9 +1,11 @@
-import { useMemo } from "react";
+import { useState } from "react";
 import "./header.css";
 
 const images = import.meta.glob("../../../assets/images/header/*.png", {
   eager: true,
 });
+
+const imageEntries = Object.entries(images);
 
 const subtitles = {
   Kezdőlap: "Üdvözöljük oldalunkon!",
@@ -13,45 +15,54 @@ const subtitles = {
   Konfigurációk: "Nézd meg mások alkotásait!",
 };
 
-function Header({ pageName = "Kezdőlap" }) {
-  const imageEntries = Object.entries(images);
-  const scatteredImages = useMemo(() => {
-    const placed = [];
+function generateScatteredImages() {
+  const placed = [];
+  const minDistance = 8;
 
-    const minDistance = 10;
+  imageEntries.forEach((x, i) => {
+    let attempts = 0;
+    let left = 0;
+    let top = 0;
+    let isValid = false;
 
-    imageEntries.forEach((x, i) => {
-      let attempts = 0;
-      let left = 0;
-      let top = 0;
-      let isValid = false;
+    while (!isValid && attempts < 100) {
+      left = Math.floor(Math.random() * 90) + 5;
+      top = Math.floor(Math.random() * 40) + 30;
 
-      while (!isValid && attempts < 100) {
-        left = Math.floor(Math.random() * 90) + 5;
-        top = Math.floor(Math.random() * 40) + 30;
+      isValid = placed.every((other) => {
+        return Math.abs(left - other.left) >= minDistance;
+      });
 
-        isValid = placed.every((other) => {
-          return Math.abs(left - other.left) >= minDistance;
-        });
-
-        if (left > 47 && left < 53) {
-          isValid = false;
-        }
-
-        attempts++;
+      if (left > 40 && left < 60) {
+        isValid = false;
       }
 
-      placed.push({
-        id: i,
-        src: x[1].default,
-        left,
-        top,
-        rotate: Math.floor(Math.random() * 60) - 30,
-      });
-    });
+      attempts++;
+    }
 
-    return placed;
-  }, [pageName]);
+    const baseRotate = Math.floor(Math.random() * 60) - 30;
+    const swayAmount = Math.floor(Math.random() * 15) + 5;
+    const direction = Math.random() < 0.5 ? 1 : -1;
+    const duration = (Math.random() * 3 + 1).toFixed(2);
+    const delay = -(Math.random() * 5).toFixed(2);
+
+    placed.push({
+      id: i,
+      src: x[1].default,
+      left,
+      top,
+      startRotate: baseRotate,
+      endRotate: baseRotate + swayAmount * direction,
+      duration,
+      delay,
+    });
+  });
+
+  return placed;
+}
+
+function Header({ pageName = "Kezdőlap" }) {
+  const [scatteredImages] = useState(generateScatteredImages);
 
   return (
     <div className="header">
@@ -59,12 +70,14 @@ function Header({ pageName = "Kezdőlap" }) {
         <img
           key={img.id}
           src={img.src}
-          alt=""
           className="header-img"
           style={{
             left: `${img.left}%`,
             top: `${img.top}%`,
-            transform: `translate(-50%, -50%) rotate(${img.rotate}deg)`,
+            "--start-rotate": `${img.startRotate}deg`,
+            "--end-rotate": `${img.endRotate}deg`,
+            animationDuration: `${img.duration}s`,
+            animationDelay: `${img.delay}s`,
           }}
         />
       ))}

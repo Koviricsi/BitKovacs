@@ -1,48 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Style+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Style+Script&display=swap");
 
-.header{
-    min-width: 100dvw;
-    min-height: 300px;
-    background: radial-gradient(var(--dark-blue) 30%, var(--light-blue));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+.header {
+  width: 100%;
+  min-height: 300px;
+  background: radial-gradient(var(--dark-blue) 30%, var(--blue));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
-.header-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 40%;
-    padding: 50px 100px;
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 40%;
+  padding: 50px 100px;
 }
 .header-title,
-.header-subtitle{
-    text-align: center;
-    color: var(--white);
-    z-index: 1;
-    paint-order: stroke fill;
+.header-subtitle {
+  text-align: center;
+  color: var(--white);
+  z-index: 1;
+  paint-order: stroke fill;
 }
-.header-title{
-    padding-inline: 40px;
-    margin-inline: -40px;
-    border-bottom: solid;
-    font-family: "Inria Sans", sans-serif;
-    font-size: 30px;
-    -webkit-text-stroke: 3px var(--dark-blue);
+.header-title {
+  padding-inline: 40px;
+  margin-inline: -40px;
+  border-bottom: solid;
+  font-family: "Inria Sans", sans-serif;
+  font-size: 40px;
+  -webkit-text-stroke: 3px var(--dark-blue);
 }
-.header-subtitle{
-    font-family: "Style Script", cursive;
-    font-size: 50px;
-    -webkit-text-stroke: 8px var(--dark-blue);
+.header-subtitle {
+  font-family: "Style Script", cursive;
+  font-size: 60px;
+  -webkit-text-stroke: 8px var(--dark-blue);
 }
-.header-img{
-    width: 150px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    filter: drop-shadow(5px 5px 1px var(--grey-blue));
-    opacity: 0.75;
+.header-img {
+  width: 150px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  filter: drop-shadow(5px 5px 1px var(--grey-blue));
+  opacity: 0.75;
+  animation-name: gentleSway;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  will-change: transform;
+}
+
+@keyframes gentleSway {
+  0% {
+    transform: translate(-50%, -50%) rotate(var(--start-rotate));
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(var(--end-rotate));
+  }
 }
