@@ -24,11 +24,17 @@ footer {
     align-items: center;
     gap: 10px;
     font-size: 25px;
+    cursor: pointer;
+    &:is(:hover,:active,:focus) > span{
+        font-variation-settings: 'FILL' 1;
+    }
 }
 .footer-info > h2 > span{
-    border: solid var(--white) 2px;
+    border: solid var(--white) 3px;
+    font-variation-settings: 'FILL' 0;
     border-radius: 50%;
     padding: 3px;
+    transition: all 0.1s;
 }
 .footer-title{
     font-size: 30px;

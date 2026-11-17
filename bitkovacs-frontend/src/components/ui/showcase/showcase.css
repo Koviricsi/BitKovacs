@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.showcaseContainer{
+    height: 600px;
+    background: radial-gradient(ellipse at bottom left, var(--blue), var(--dark-blue));
+    display: flex;
+    flex-direction: column;
+}
+.showcaseTitle{
+    font-family: "Bangers", system-ui;
+    font-size: 45px;
+    padding: 40px;
+    color: var(--white);
+    text-shadow: 2px 2px var(--light-blue);
+    letter-spacing: 5px;
+}

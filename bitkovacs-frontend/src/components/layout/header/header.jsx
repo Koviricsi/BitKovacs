@@ -41,10 +41,10 @@ function generateScatteredImages() {
     }
 
     const baseRotate = Math.floor(Math.random() * 60) - 30;
-    const swayAmount = Math.floor(Math.random() * 15) + 5;
+    const swayAmount = Math.floor(Math.random() * 30) + 5;
     const direction = Math.random() < 0.5 ? 1 : -1;
     const duration = (Math.random() * 3 + 1).toFixed(2);
-    const delay = -(Math.random() * 5).toFixed(2);
+    const delay = -(Math.random() * 8).toFixed(2);
 
     placed.push({
       id: i,

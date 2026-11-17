@@ -18,7 +18,7 @@ function Nav() {
         </div>
         <div className="nav-links">
           <h3>Alkatrészek</h3>
-          <span className='material-symbols-outlined'>full_stacked_bar_chart</span>
+          <span className='material-symbols-outlined'>memory</span>
         </div>
         <div className="nav-links">
           <h3>Konfigurációk</h3>

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.landingContainer{
+    width: 100%;
+    display: flex;
+    background: radial-gradient(ellipse at bottom right, var(--light-blue), var(--baby-blue) 50%, var(--white));
+}
+.landingText{
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0 0 100px;
+    gap: 50px;
+}
+.landingText h1{
+    font-family: "Bangers", system-ui;
+    font-size: 80px;
+    color: var(--dark-blue);
+}
+.landingText h1 span{
+    font-size: 70px;
+    color: var(--blue);
+    text-shadow: none;
+}
+.landingText p{
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    color: var(--dark-blue);
+    width: 800px;
+}
+.landingText p span{
+    text-decoration: underline;
+}
+.landingImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.landingImg img{
+    width: 800px;
+}
