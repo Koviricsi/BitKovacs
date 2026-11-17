@@ -72,12 +72,16 @@ nav{
         color: var(--dark-blue);
         background-color: var(--white);
     }
+    &:is(:hover,:active,:focus) > span{
+        font-variation-settings: 'FILL' 1;
+    }
 }
 .nav-buttons h3{
     font-size: 25px;
 }
 .nav-buttons span{
     font-size: 30px;
+    font-variation-settings: 'FILL' 0;
 }
 *{
     outline: red  1px;
