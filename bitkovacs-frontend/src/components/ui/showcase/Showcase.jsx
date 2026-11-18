@@ -1,12 +1,19 @@
 import "./showcase.css";
 
-function Showcase({ children, lightmode = false, title = "", right = false}) {
-  const light = {
-    backgroundColor: "var(--baby-blue)",
-  };
+function Showcase({ children, title = "", right = false, animate = true }) {
+  const showcaseClasses = ["showcaseContainer", right && "right"]
+    .filter(Boolean)
+    .join(" ");
+  const titleClasses = [
+    "showcaseTitle",
+    animate && right && "fade-right",
+    animate && !right && "fade-left",
+  ]
+    .filter(Boolean)
+    .join(" ");
   return (
-    <div className="showcaseContainer">
-      <h2 className="showcaseTitle" style={right ? {marginLeft: "auto"} : {marginRight: "auto"}}>{title}</h2>
+    <div className={showcaseClasses}>
+      <h2 className={titleClasses}>{title}</h2>
       <div className="showcase"></div>
     </div>
   );

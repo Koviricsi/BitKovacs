@@ -1,42 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
-.landingContainer{
-    width: 100%;
-    display: flex;
-    background: radial-gradient(ellipse at bottom right, var(--light-blue), var(--baby-blue) 50%, var(--white));
+.landingContainer {
+  width: 100%;
+  display: flex;
 }
-.landingText{
-    display: flex;
-    flex-direction: column;
-    margin: 100px 0 0 100px;
-    gap: 50px;
+.landingText {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left: 100px;
+  gap: 50px;
 }
-.landingText h1{
-    font-family: "Bangers", system-ui;
-    font-size: 80px;
-    color: var(--dark-blue);
+.landingText h1 {
+  font-family: "Bangers", system-ui;
+  font-size: 80px;
+  color: var(--dark-blue);
 }
-.landingText h1 span{
-    font-size: 70px;
+.landingText h1 span {
+  font-size: 70px;
+  color: var(--blue);
+  text-shadow: none;
+}
+.landingText p {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  color: var(--dark-blue);
+  width: 800px;
+}
+.landingText p span {
+  text-decoration: underline;
+}
+.landingText p ol {
+  list-style: upper-roman;
+}
+.landingText p ol li {
+  padding: 10px;
+}
+.landingText button {
+  width: fit-content;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: var(--blue);
+  color: var(--white);
+  font-family: "Sansation", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  border: solid var(--blue) 3px;
+  border-radius: 30px;
+  filter: drop-shadow(6px 6px 5px var(--dark-blue));
+  &:is(:hover, :active, :focus) {
+    background-color: var(--white);
     color: var(--blue);
-    text-shadow: none;
+  }
 }
-.landingText p{
-    font-family: "Chakra Petch", sans-serif;
-    font-weight: bold;
-    font-size: 26px;
-    color: var(--dark-blue);
-    width: 800px;
+.landingImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-.landingText p span{
-    text-decoration: underline;
+.landingImg img {
+  width: 700px;
+  filter: drop-shadow(2px 2px 2px var(--dark-blue));
 }
-.landingImg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+
+.landingContainer.right {
+  flex-direction: row-reverse;
 }
-.landingImg img{
-    width: 800px;
+.right .landingText {
+  margin-left: 0;
+  margin-right: 100px;
+  text-align: right;
+  text-wrap: balance;
+}
+.right .landingText h1 {
+  text-align: right;
+}
+.right .landingText button {
+  margin-left: auto;
 }

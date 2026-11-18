@@ -13,7 +13,7 @@ function Nav() {
           <span className='material-symbols-outlined'>build</span>
         </div>
         <div className="nav-links">
-          <h3>MI Tervező</h3>
+          <h3>Bit-Kovács</h3>
           <span className='material-symbols-outlined'>wand_stars</span>
         </div>
         <div className="nav-links">

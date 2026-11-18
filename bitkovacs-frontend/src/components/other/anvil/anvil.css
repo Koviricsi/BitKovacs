@@ -1,0 +1,56 @@
+.anvilContainer {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 1;
+  overflow: clip;
+  margin: auto;
+}
+.anvilContainer img {
+  position: absolute;
+  margin: auto;
+}
+.anvilContainer img:first-child {
+  inset: 0;
+}
+.anvilContainer img:nth-child(2){
+    transform: translateX(2%) translateY(-5%);
+    animation: anvilEffect 2s linear infinite alternate;
+}
+.anvilContainer img:nth-child(3){
+  transform: translateX(-8%) translateY(-22%);
+  animation: anvilNumbers 4s linear infinite;
+}
+.anvilContainer img:last-child {
+  animation: anvilPunch 2s cubic-bezier(0.7, 0, 1, 1) infinite alternate;
+  will-change: transform;
+}
+
+@keyframes anvilEffect {
+    0%, 95%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes anvilNumbers {
+  0%, 50% {
+    opacity: 0;
+  }
+  52%,55%,58%,61%,64% {
+    opacity: 0;
+  }
+  53%,54%,56%,57%,59%,60%,62%,63%,65% {
+    opacity: 1; 
+  }
+  75%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes anvilPunch {
+  0% {
+    transform: translateX(20%) translateY(-24%) rotate(90deg);
+  }
+  100% {
+    transform: translateX(15%) translateY(-18%) rotate(0deg);
+  }
+}

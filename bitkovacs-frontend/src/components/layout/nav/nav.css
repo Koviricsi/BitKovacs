@@ -38,12 +38,14 @@ nav {
   flex-direction: column;
   gap: 4px;
   transition: all 0.2s;
-  border-bottom: solid transparent 5px;
   &:is(:hover, :active, :focus) {
-    border-bottom: solid var(--white) 5px;
+    box-shadow: inset 2px 0 white, inset -2px 0 white;
+    backdrop-filter: brightness(1.4);
   }
   &:is(:hover, :active, :focus) > span {
     font-variation-settings: "FILL" 1;
+    color: var(--dark-blue);
+    background-color: var(--white);
   }
   &:is(:hover, :active, :focus) > h3 {
     text-shadow: 2px 2px var(--light-blue);
@@ -89,20 +91,24 @@ nav {
   transition: all 0.2s;
 }
 .nav-buttons:last-child span {
-    position: absolute;
-    offset-path: border-box;
-    transform: translateY(-40%);
-    color: var(--white);
-    animation-name: cartRoll;
-    animation-timing-function: linear;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
+  position: absolute;
+  offset-path: border-box;
+  transform: translateY(-40%);
+  color: var(--white);
+  animation-name: cartRoll;
+  animation-timing-function: linear;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
 }
 * {
   outline: red 1px;
 }
 
 @keyframes cartRoll {
-    0%{offset-distance: 0%;}
-    100%{offset-distance: 100%;}
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
 }
