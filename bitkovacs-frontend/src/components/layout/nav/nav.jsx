@@ -1,26 +1,31 @@
 import './nav.css'
 
-function Nav() {
+function Nav({activePage, setActivePage}) {
   return(
     <nav>
       <div className='nav-links-container'>
-        <div className="nav-links">
+        <div className={activePage === "home" ? "nav-links active" : "nav-links"} 
+        onClick={() => setActivePage("home")}>
           <h3>Kezdőlap</h3>
           <span className='material-symbols-outlined'>home</span>
         </div>
-        <div className="nav-links">
+        <div className={activePage === "planner" ? "nav-links active" : "nav-links"} 
+        onClick={() => setActivePage("planner")}>
           <h3>Tervező</h3>
           <span className='material-symbols-outlined'>build</span>
         </div>
-        <div className="nav-links">
+        <div className={activePage === "bitkovacs" ? "nav-links active" : "nav-links"} 
+        onClick={() => setActivePage("bitkovacs")}>
           <h3>Bit-Kovács</h3>
           <span className='material-symbols-outlined'>wand_stars</span>
         </div>
-        <div className="nav-links">
+        <div className={activePage === "parts" ? "nav-links active" : "nav-links"} 
+        onClick={() => setActivePage("parts")}>
           <h3>Alkatrészek</h3>
           <span className='material-symbols-outlined'>memory</span>
         </div>
-        <div className="nav-links">
+        <div className={activePage === "configurations" ? "nav-links active" : "nav-links"} 
+        onClick={() => setActivePage("configurations")}>
           <h3>Konfigurációk</h3>
           <span className='material-symbols-outlined'>engineering</span>
         </div>

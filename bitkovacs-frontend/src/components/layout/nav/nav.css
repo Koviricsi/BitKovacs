@@ -39,7 +39,9 @@ nav {
   gap: 4px;
   transition: all 0.2s;
   &:is(:hover, :active, :focus) {
-    box-shadow: inset 2px 0 white, inset -2px 0 white;
+    box-shadow:
+      inset 2px 0 white,
+      inset -2px 0 white;
     backdrop-filter: brightness(1.4);
   }
   &:is(:hover, :active, :focus) > span {
@@ -100,8 +102,10 @@ nav {
   animation-duration: 8s;
   animation-iteration-count: infinite;
 }
-* {
-  outline: red 1px;
+.active > span {
+  font-variation-settings: "FILL" 1;
+  color: var(--dark-blue);
+  background-color: var(--white);
 }
 
 @keyframes cartRoll {
