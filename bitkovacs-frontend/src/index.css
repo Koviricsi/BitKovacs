@@ -31,6 +31,7 @@
   padding: 0;
   transition: all 0.1s;
   scroll-behavior: smooth;
+  transition-behavior: allow-discrete;
 }
 
 body {
@@ -45,6 +46,8 @@ body {
 #root {
   min-height: 100dvh;
   overflow-x: clip;
+  display: flex;
+  flex-direction: column;
 }
 
 img,

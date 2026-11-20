@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "kategoria_id": 1042,
+    "nev": "AMD Ryzen 7 7800X3D Box",
+    "keszlet": 16,
+    "netto_ar": 142000,
+    "afa": 27,
+    "pontszam": 5,
+    "adatok": {
+      "foglalat": "AM5",
+      "architektura": "Zen 4",
+      "magok": 8,
+      "szalak": 16,
+      "alap_orajel_ghz": 4.2,
+      "boost_orajel_ghz": 5.0,
+      "l3_cache_mb": 96,
+      "tdp_watt": 120,
+      "integralt_gpu": true,
+      "huto_mellekelve": false,
+      "tamogatott_ram": ["DDR5-5200"]
+    }
+  },
+  {
+    "id": 17,
+    "kategoria_id": 3092,
+    "nev": "MSI GeForce RTX 5070 VENTUS 3X OC 12GB",
+    "keszlet": 4,
+    "netto_ar": 275000,
+    "afa": 27,
+    "pontszam": 5,
+    "adatok": {
+      "architektura": "Blackwell",
+      "vram_gb": 12,
+      "memoria_tipus": "GDDR7",
+      "csatolo": "PCIe 5.0",
+      "hossz_mm": 308,
+      "ajanlott_tap_watt": 650,
+      "boost_orajel_mhz": 2542,
+      "hutes": "3 ventilátoros",
+      "kimenetek": ["1x HDMI 2.1b", "3x DisplayPort 2.1b"]
+    }
+  }
+]

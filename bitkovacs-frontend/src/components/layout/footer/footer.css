@@ -8,6 +8,7 @@ footer {
   grid-template-columns: 1fr 1fr;
   color: var(--white);
   font-family: "Sansation", sans-serif;
+  border-top: solid var(--dark-blue) 5px;
 }
 .footer-info,
 .footer-desc {

@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Commissioner:wght@100..900&display=swap");
+
+.stringInputWrapper {
+  width: 100%;
+  margin-block: 10px;
+}
+.stringInputWrapper h3 {
+  font-family: "Commissioner", sans-serif;
+  font-size: 26px;
+  color: var(--dark-blue);
+}
+.stringInputWrapper section {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(from var(--light-blue) h s l / 0.3);
+  padding: 10px;
+  border-radius: 15px;
+}
+.stringInputLabel {
+  font-family: "Actor", sans-serif;
+  font-size: 22px;
+  color: var(--dark-blue);
+  padding-right: 10px;
+}
+.stringInputCheckbox {
+  appearance: none;
+  position: relative;
+  width: 25px;
+  aspect-ratio: 1;
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  cursor: pointer;
+  &:checked {
+    background-color: var(--light-blue);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    clip-path: path(
+      "M4.29 13.71a1 1 0 0 1 1.42-1.42L9 15.59l9.29-9.3a1 1 0 1 1 1.42 1.42l-10 10a1 1 0 0 1-1.42 0l-5-5Z"
+    );
+    background-color: var(--white);
+    transform: scale(0);
+    will-change: transform;
+  }
+  &:checked::after {
+    transform: scale(1);
+  }
+}

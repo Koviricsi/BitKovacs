@@ -1,10 +1,10 @@
-import Landing from "../components/ui/landing/landing.jsx";
-import Showcase from "../components/ui/showcase/Showcase.jsx";
+import Landing from "../../components/ui/landing/landing.jsx"
+import Showcase from "../../components/ui/showcase/Showcase.jsx";
 
-import Anvil from "../components/other/anvil/anvil.jsx";
+import Anvil from "../../components/other/anvil/anvil.jsx";
 
-import puzzle from "../assets/images/content/puzzle_sketch.png";
-import checklist from "../assets/images/content/checklist_sketch.png";
+import puzzle from "../../assets/images/content/puzzle_sketch.png";
+import checklist from "../../assets/images/content/checklist_sketch.png";
 
 function Home() {
   return (

@@ -1,0 +1,23 @@
+.filterContainer {
+  height: 100%;
+}
+.filterContainer > span {
+  position: absolute;
+  top: 0;
+  font-size: 50px;
+  color: var(--dark-blue);
+  padding: 10px;
+  font-variation-settings: "FILL" 0;
+  cursor: pointer;
+  &:is(:hover, :active, :focus) {
+    font-variation-settings: "FILL" 1;
+  }
+}
+.filterContainer > section {
+  padding: 10px 20px 10px 40px;
+  background-color: var(--baby-blue);
+  max-width: 350px;
+  margin-block: 70px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+}
